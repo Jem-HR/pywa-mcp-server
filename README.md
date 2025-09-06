@@ -73,12 +73,29 @@ Open http://localhost:6275 in your browser to:
 
 ## Claude Desktop Integration
 
-### Quick Setup
-Use FastMCP's automatic installation:
+### Quick Setup (One Command)
+Install directly in Claude Desktop config:
 
-```bash
-uv run fastmcp install server.py --env-var WHATSAPP_PHONE_ID=your_phone_id --env-var WHATSAPP_TOKEN=your_token
+```json
+{
+  "mcpServers": {
+    "pywa-whatsapp": {
+      "command": "uvx",
+      "args": [
+        "--from",
+        "git+https://github.com/Jem-HR/pywa-mcp-server.git",
+        "pywa-mcp-server"
+      ],
+      "env": {
+        "WHATSAPP_PHONE_ID": "your_phone_id",
+        "WHATSAPP_TOKEN": "your_token"
+      }
+    }
+  }
+}
 ```
+
+This automatically downloads and runs the server without manual installation.
 
 ### Manual Configuration
 

@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "pywa-whatsapp": {
+      "command": "uvx",
+      "args": [
+        "--from",
+        "git+https://github.com/Jem-HR/pywa-mcp-server.git",
+        "pywa-mcp-server"
+      ],
+      "env": {
+        "WHATSAPP_PHONE_ID": "your_phone_number_id_from_meta_console",
+        "WHATSAPP_TOKEN": "your_whatsapp_cloud_api_token_from_meta_console"
+      }
+    }
+  }
+}
