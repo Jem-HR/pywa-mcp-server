@@ -73,5 +73,10 @@ except ValueError as e:
     logger.error("Please set WHATSAPP_PHONE_ID and WHATSAPP_TOKEN environment variables")
 
 
-if __name__ == "__main__":
+def main():
+    """Main entry point for the MCP server."""
     mcp.run()
+
+
+if __name__ == "__main__":
+    main()
